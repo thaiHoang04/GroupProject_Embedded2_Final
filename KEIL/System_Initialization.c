@@ -6,8 +6,11 @@
 /*---------------------------------------------------------------------------*/
 
 #define HXTSTB 1<<0				// HXT Clock Sourse Stable Flag
+#define LXTSTB 1<<1				// LXT Clock Sourse Stable Flag
 #define PLLSTB 1<<2				// Internal PLL Clock Source Stable Flag
 #define HXTEN  1<<0				// HXT Enable Bit, write 1 to enable
+#define LXTEN  1<<1				// LXT Enable Bit, write 1 to enable
+#define HIRCEN 1<<2				// HIRC Enable Bit, write 1 to enable
 #define HIRC_STATUS 1 << 4 // 12 MHz
 
 /*---------------------------------------------------------------------------*/
@@ -24,13 +27,8 @@ void enableHXT() {
 	// 0x00: input; 0x01: Output (push-pull)
     PF->MODE &= ~((0x00 << 4) | (0x00 << 6));
 
-    //Enable External High-Speed Crystal (HXT)
+    // Enable and wait until HXT 12MHz clock source is stable
     CLK->PWRCTL |= HXTEN;                                       // Enable HXT
-    
-    /* 
-        Waiting for 12MHz clock ready 
-    */
-    
     while (!(CLK->STATUS & HXTSTB));                            // Wait for HXT to stabilize
 }
 
@@ -40,17 +38,23 @@ void enableLXT() {
     PF->MODE &= ~((0b11 << 8) | (0b11 << 10));
     
     // Enable and wait until LXT 32.7 kHz clock source is stable
-    CLK->PWRCTL |= 1 << 1;
-    while (!(CLK->STATUS & (1 << 1)));
+    CLK->PWRCTL |= LXTEN;                                       // Enable LXT
+    while (!(CLK->STATUS & LXTSTB));                            // Wait for LXT to stabilize
+}
+
+void enableHIRC() {
+    // Enable and wait until HIRC 12 MHz clock source is stable.
+    CLK->PWRCTL |= HIRCEN;                                   // Enable HIRC
+    while (!(CLK->STATUS & HIRC_STATUS));                       // Wait for HIRC to stabilize
 }
 
 void configJoyStickUpRight() {
-    // Interrupt Source ? SW3 on PF.11 - Edge trigger interrupt
-    PG->MODE &= ~((0x3 << 4) | (0x3 << 8)); 		// Clear bits [22:23] for PF.11 
+    // Interrupt Source Joystick on PG.02 and PG.04 - Edge trigger interrupt
+    PG->MODE &= ~((0x3 << 4) | (0x3 << 8)); 		// Clear bits [4:5] and [8:9] for PG.2 and PG.4
 
-    PG->INTTYPE &= ~((1 << 2) | (1 << 4)); 		    // Edge trigger interrupt for PF.11 
+    PG->INTTYPE &= ~((1 << 2) | (1 << 4)); 		    // Edge trigger interrupt for PG.2 and PG.4
     PG->INTEN |= ((1 << 2) | (1 << 4)); 		    // Falling edge interrupt enable
-    PG->INTSRC |= ((1 << 2) | (1 << 4));		    // Clear any pending interrupt flag for PF.11
+    PG->INTSRC |= ((1 << 2) | (1 << 4));		    // Clear any pending interrupt flag for PG.2 and PG.4
 
     // NVIC interrupt configuration
     NVIC->ISER[2] |= (1 << (72 - 64)); 		        // Enable NVIC for the GPIO interrupt on Port G - 
@@ -58,12 +62,12 @@ void configJoyStickUpRight() {
 }
 
 void configJoyStickDownLeft() {
-    // Interrupt Source ? SW3 on PF.11 - Edge trigger interrupt
-    PC->MODE &= ~((0x3 << 18) | (0x03 << 20)); 		// Clear bits [22:23] for PF.11 
+    // Interrupt Source Joystick on PC.09 and PC.10 - Edge trigger interrupt
+    PC->MODE &= ~((0x3 << 18) | (0x03 << 20)); 		// Clear bits [18:19] and [20:21] for PC.9 and PC.10
 
-    PC->INTTYPE &= ~((1 << 9) | (1 << 10)); 		// Edge trigger interrupt for PF.11 
+    PC->INTTYPE &= ~((1 << 9) | (1 << 10)); 		// Edge trigger interrupt for PC.9 and PC.10
     PC->INTEN |= ((1 << 9) | (1 << 10)); 		    // Falling edge interrupt enable
-    PC->INTSRC |= ((1 << 9) | (1 << 10));		    // Clear any pending interrupt flag for PF.11
+    PC->INTSRC |= ((1 << 9) | (1 << 10));		    // Clear any pending interrupt flag for PC.9 and PC.10
 
     // NVIC interrupt configuration
     NVIC->ISER[0] |= (1 << 18); 		            // Enable NVIC for the GPIO interrupt on Port G - 
@@ -73,6 +77,7 @@ void configJoyStickDownLeft() {
 void configTimer1() {
     //Config the timer 1
     CLK->CLKSEL1 &= ~ (0b111 << 12);                            // clear setting and choose clock source from HXT
+    CLK->CLKSEL1 |= (0b010 << 12);                             // Set clock source for Timer 1 to PCLK0
     CLK->APBCLK0 |= (1 << 3); 		                            // Clock enable for Timer 1
 	
     // Set Prescale
@@ -139,24 +144,24 @@ void SYS_Init(void)
     /* Unlock protected registers */
     SYS_UnlockReg();
     
-    //Enable HXT
+    // Enable HXT
     enableHXT();
     
-    //Enable LXT
+    // Enable LXT
     enableLXT();
+
+    // Enable HIRC
+    enableHIRC();
 
     /* Switch HCLK clock source to HXT */
     // Set HCLK to HXT
-	CLK->CLKSEL0 &= (~(0x07 << 0));                             // Clear current settings for 
-    CLK->CLKSEL0 |= 0x00; 					                    // Set a new value
-
-    /* Set core clock as PLL_CLOCK from PLL */
+	CLK->CLKSEL0 &= (~(0x07 << 0));                             // Clear current settings  
+    CLK->CLKSEL0 |= (0b000 << 0); 					            // Set a new value
     
-    // Enable and wait until HIRC 12 MHz clock source is stable.
-    // This is not required since this clock is enabled by default (after system reset)
-    CLK->PWRCTL |= 1 << 2;
-    while (!(CLK->STATUS & HIRC_STATUS));
-    CLK->CLKSEL0 |= (0b111 << 0);
+    /* Switch HCLK clock source to HIRC */
+    // Set HCLK to HXT
+	CLK->CLKSEL0 &= (~(0x07 << 0));                             // Clear current settings  
+    CLK->CLKSEL0 |= (0b111 << 0); 					            // Set a new value
     
     // Set HCLK Divider to 0
 	CLK->CLKDIV0 &= (~0x0F);                                    // Clear current settings for HCLKDIV
@@ -173,14 +178,15 @@ void SYS_Init(void)
     // NR = 2 -> INDIV = 1
     // NF = 32 -> FBDIV = 30
     // NO = 2 -> OUTDIV = "01"
-    CLK->PLLCTL |= (9 << 1);                                    // INDIV
-    CLK->PLLCTL |= (0 << 30);                                   // FBDIV
-    CLK->PLLCTL &= (14 << 0x01);                                // OUTDIV
-    
+    // CLK->PLLCTL |= (9 << 1);                                    // INDIV
+    // CLK->PLLCTL |= (0 << 30);                                   // FBDIV
+    // CLK->PLLCTL &= (14 << 0x01);                                // OUTDIV
+    CLK->PLLCTL |= 0x821E;
     while (!(CLK->STATUS & PLLSTB));                            // Wait for PLL to stabilize
 
     // Select PLLFOUT for CPU
-    CLK->CLKSEL0 |= (0x02 << 0);                                // CLKSEL0[2:0] = 0b010
+    CLK->CLKSEL0 &= ~(0x07 << 0);                             // Clear current settings for 
+    CLK->CLKSEL0 |= (0x02 << 0);                              // CLKSEL0[2:0] = 0b010
 
     /* Set both PCLK0 and PCLK1 as HCLK/2 */
     CLK->PCLKDIV |= (0x1 << 0) | (0x1 << 4);
@@ -206,9 +212,25 @@ void SYS_Init(void)
     //CLK_EnableModuleClock(UART0_MODULE);
     CLK->APBCLK0 |= (1 << 16);                                  // enable UART0 clock
     //CLK_EnableModuleClock(EBI_MODULE);
-    CLK->AHBCLK |= (1 << 3);                                    // enable EBI clock
+    CLK->AHBCLK  |= (1 << 3);                                   // enable EBI clock
     //CLK_EnableModuleClock(EADC_MODULE);
     CLK->APBCLK0 |= (1 << 28);                                  // enable EADC0 clock
+    // TRNG peripheral clock
+    CLK->APBCLK1 |= (1 << 25);                                  // enable TRNG clock
+
+    // Turn off TRNG then set the clock prescaler then turn on TRNG
+    TRNG->CTL &= ~(0x1 << 0);                         // Clear TRNG_CTL[0] to disable TRNG
+
+    // Clock Prescaler - PSC for TRNG
+    TRNG->CTL &= ~(0x7 << 2);                               // Clear current settings
+    TRNG->CTL |= (0 << 2);                                  // Set new value for TRNG clock prescaler
+
+    // Activate TRNG
+    TRNG->ACT |= (1 << 0);
+    while(!(TRNG->CTL & (1 << 7)));                       // Wait until TRNG is ready
+
+    // Enable TRNG
+    TRNG->CTL |= (1 << 0);                                // Set TRNG_CTL[0] to enable TRNG
 
     /*---------------------------------------------------------------------------------------------------------*/
     /* Init I/O Multi-function                                                                                 */

@@ -43,10 +43,10 @@ void TMR1_IRQHandler(void)
     /* Clear timer interrupt flag */
     TIMER1->INTSTS |= (1 << 0);
 
-    /* Set Timer3_flag = 1 */
+    /* Set Timer1_flag = 1 */
     Timer1_flag = 1;
 
-    /* Timer3_cnt + 1 */
+    /* Timer1_cnt + 1 */
     Timer1_cnt = Timer1_cnt + 1;
 
 }

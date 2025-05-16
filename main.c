@@ -38,13 +38,58 @@ volatile uint8_t    currentXRLimit;
 volatile uint8_t    currentXLLimit;
 volatile uint16_t   currentYLimit;
 
+
 /*---------------------------------------------------------------------------*/
 /* Functions                                                                 */
 /*---------------------------------------------------------------------------*/
 
+uint8_t generateRandomNumber(void) {
+    while(!(TRNG->CTL & (1 << 1)));                       // Wait until TRNG is ready
+    uint8_t randomNumber = TRNG->DATA & 0xFF;       // Get a random number between 0 and 7
+    return randomNumber;
+}
 
 void generateNewBlock() {
-
+    uint8_t randomNumber = (generateRandomNumber() % 7) + 1;
+    switch (randomNumber) {
+        case 1: 
+            currentType = 1;
+            currentDirection = 2;
+            LCD_Draw_BlockType1(currentX, currentY, 2);
+            break;
+        case 2: 
+            currentType = 2;
+            currentDirection = 1;
+            LCD_Draw_BlockType2(currentX, currentY);
+            break;
+        case 3: 
+            currentType = 3;
+            currentDirection = 4;
+            LCD_Draw_BlockType3(currentX, currentY, 4);
+            break;
+        case 4: 
+            currentType = 4;
+            currentDirection = 4;
+            LCD_Draw_BlockType4(currentX, currentY, 4);
+            break;
+        case 5: 
+            currentType = 5;
+            currentDirection = 2;
+            LCD_Draw_BlockType5(currentX, currentY, 2);
+            break;
+        case 6: 
+            currentType = 6;
+            currentDirection = 2;
+            LCD_Draw_BlockType6(currentX, currentY, 2);
+            break;
+        case 7: 
+            currentType = 7;
+            currentDirection = 4;
+            LCD_Draw_BlockType7(currentX, currentY, 4);
+            break;
+    }
+    
+    while(1){}
 }
 
 /*---------------------------------------------------------------------------*/
@@ -62,11 +107,6 @@ void TMR0_IRQHandler(void) {
     /* Clear timer interrupt flag */
     TIMER0->INTSTS |= (1 << 0);
 }
-
-
-
-
-
 
 /*---------------------------------------------------------------------------------------------------------*/
 /*  Main Function                                                                                          */
@@ -97,14 +137,14 @@ int32_t main(void)
 
     /* Initialize EBI bank0 to access external LCD Module */
     EBI->CTL0 &= ~((0xF << 0) | (1 << 4) | (0b111 << 8)         // Clear the current setting in EBI Bank0.
-                    | (0b111 << 16) | (1 << 24));               
-    EBI->CTL0 |= (1 << 1);                                      // Set the EBI data width to 16-bit.
-    EBI->CTL0 |= (0b001 << 8);                                  // Set the external output clock divider to HCLK / 2 (001).
-    EBI->CTL0 &= ~(1 << 2);                                     // Select the active low chip pin.
-    EBI->CTL0 |= (1 << 0);                                      // Enable EBI function/
-    EBI->CTL0 |= (3 << 16);                                     // Set the extend time of ALE.
-    EBI->CTL0 |= (1 << 4);                                      // Enable the continous data access mode.
-    EBI->TCTL0 |= ((1 << 23) | (1 << 22));                      // Disable the data access hold time during EBI writing and reading.
+                              | (0b111 << 16) | (1 << 24));               
+    EBI->CTL0  |= (1 << 1);                                      // Set the EBI data width to 16-bit.
+    EBI->CTL0  |= (0b001 << 8);                                  // Set the external output clock divider to HCLK / 2 (001).
+    EBI->CTL0  &= ~(1 << 2);                                     // Select the active low chip pin.
+    EBI->CTL0  |= (1 << 0);                                      // Enable EBI function/
+    EBI->CTL0  |= (3 << 16);                                     // Set the extend time of ALE.
+    EBI->CTL0  |= (1 << 4);                                      // Enable the continous data access mode.
+    EBI->TCTL0 |= ((1 << 23) | (1 << 22));                       // Disable the data access hold time during EBI writing and reading.
 
     /* Init LCD Module */
     ILI9341_Initial();
