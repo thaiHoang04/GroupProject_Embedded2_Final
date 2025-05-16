@@ -1,0 +1,1471 @@
+Component: Arm Compiler for Embedded 6.22 Tool: armlink [5ee90200]
+
+==============================================================================
+
+Small function inlining results
+
+Inlined total of 0 calls.
+
+==============================================================================
+
+Section Cross References
+
+    system_m480.o(.text.SystemCoreClockUpdate) refers to clk.o(.text.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    system_m480.o(.text.SystemCoreClockUpdate) refers to system_m480.o(.data.PllClock) for PllClock
+    system_m480.o(.text.SystemCoreClockUpdate) refers to system_m480.o(.data.gau32ClkSrcTbl) for gau32ClkSrcTbl
+    system_m480.o(.text.SystemCoreClockUpdate) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    system_m480.o(.text.SystemCoreClockUpdate) refers to system_m480.o(.data.CyclesPerUs) for CyclesPerUs
+    system_m480.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_m480.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    system_m480.o(.ARM.exidx.text.SystemInit) refers to system_m480.o(.text.SystemInit) for [Anonymous Symbol]
+    startup_m480.o(RESET) refers to startup_m480.o(STACK) for __initial_sp
+    startup_m480.o(RESET) refers to startup_m480.o(.text) for Reset_Handler
+    startup_m480.o(RESET) refers to gpio_interrupt.o(.text.GPC_IRQHandler) for GPC_IRQHandler
+    startup_m480.o(RESET) refers to main.o(.text.TMR0_IRQHandler) for TMR0_IRQHandler
+    startup_m480.o(RESET) refers to ebi_lcd_module.o(.text.TMR1_IRQHandler) for TMR1_IRQHandler
+    startup_m480.o(RESET) refers to ebi_lcd_module.o(.text.EADC01_IRQHandler) for EADC01_IRQHandler
+    startup_m480.o(RESET) refers to gpio_interrupt.o(.text.GPG_IRQHandler) for GPG_IRQHandler
+    startup_m480.o(.text) refers to system_m480.o(.text.SystemInit) for SystemInit
+    startup_m480.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    startup_m480.o(.text) refers to retarget.o(.text.ProcessHardFault) for ProcessHardFault
+    main.o(.ARM.exidx.text.generateNewBlock) refers to main.o(.text.generateNewBlock) for [Anonymous Symbol]
+    main.o(.text.TMR0_IRQHandler) refers to main.o(.bss.currentY) for currentY
+    main.o(.text.TMR0_IRQHandler) refers to main.o(.bss.currentYLimit) for currentYLimit
+    main.o(.text.TMR0_IRQHandler) refers to gamefieldfeature.o(.text.isValidStep) for isValidStep
+    main.o(.text.TMR0_IRQHandler) refers to main.o(.bss.currentX) for currentX
+    main.o(.text.TMR0_IRQHandler) refers to main.o(.bss.currentType) for currentType
+    main.o(.text.TMR0_IRQHandler) refers to main.o(.bss.currentDirection) for currentDirection
+    main.o(.text.TMR0_IRQHandler) refers to ebi_lcd_module.o(.text.clearCurrentMove) for clearCurrentMove
+    main.o(.text.TMR0_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) for LCD_Draw_A_Tetris_Block
+    main.o(.ARM.exidx.text.TMR0_IRQHandler) refers to main.o(.text.TMR0_IRQHandler) for [Anonymous Symbol]
+    main.o(.text.main) refers to system_initialization.o(.text.SYS_Init) for SYS_Init
+    main.o(.text.main) refers to ebi_lcd_module.o(.text.ILI9341_Initial) for ILI9341_Initial
+    main.o(.text.main) refers to ebi_lcd_module.o(.text.LCD_BlankArea) for LCD_BlankArea
+    main.o(.text.main) refers to main.o(.bss.currentX) for currentX
+    main.o(.text.main) refers to main.o(.bss.currentY) for currentY
+    main.o(.text.main) refers to main.o(.bss.currentType) for currentType
+    main.o(.text.main) refers to main.o(.bss.currentDirection) for currentDirection
+    main.o(.text.main) refers to main.o(.bss.currentXRLimit) for currentXRLimit
+    main.o(.text.main) refers to main.o(.bss.currentXLLimit) for currentXLLimit
+    main.o(.text.main) refers to main.o(.bss.currentYLimit) for currentYLimit
+    main.o(.text.main) refers to ebi_lcd_module.o(.text.LCD_Draw_GameField) for LCD_Draw_GameField
+    main.o(.text.main) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType7) for LCD_Draw_BlockType7
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.TMR1_IRQHandler) refers to ebi_lcd_module.o(.bss.Timer1_flag) for Timer1_flag
+    ebi_lcd_module.o(.text.TMR1_IRQHandler) refers to ebi_lcd_module.o(.bss.Timer1_cnt) for Timer1_cnt
+    ebi_lcd_module.o(.ARM.exidx.text.TMR1_IRQHandler) refers to ebi_lcd_module.o(.text.TMR1_IRQHandler) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_WR_REG) refers to ebi_lcd_module.o(.text.LCD_WR_REG) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_WR_DATA) refers to ebi_lcd_module.o(.text.LCD_WR_DATA) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_RD_DATA) refers to ebi_lcd_module.o(.text.LCD_RD_DATA) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_SetWindow) refers to ebi_lcd_module.o(.text.LCD_SetWindow) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.ILI9341_Initial) refers to system_m480.o(.data.CyclesPerUs) for CyclesPerUs
+    ebi_lcd_module.o(.text.ILI9341_Initial) refers to puts.o(i.puts) for puts
+    ebi_lcd_module.o(.ARM.exidx.text.ILI9341_Initial) refers to ebi_lcd_module.o(.text.ILI9341_Initial) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_PutChar8x16) refers to image.o(.rodata.Font8x16) for Font8x16
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_PutChar8x16) refers to ebi_lcd_module.o(.text.LCD_PutChar8x16) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_PutString) refers to ebi_lcd_module.o(.text.LCD_PutChar8x16) for LCD_PutChar8x16
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_PutString) refers to ebi_lcd_module.o(.text.LCD_PutString) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_PutChar16x32) refers to image_16x32.o(.rodata.Font16x32) for Font16x32
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_PutChar16x32) refers to ebi_lcd_module.o(.text.LCD_PutChar16x32) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_Rectangle) refers to ebi_lcd_module.o(.text.LCD_Draw_Rectangle) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_BlankArea) refers to ebi_lcd_module.o(.text.LCD_BlankArea) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_Square) refers to ebi_lcd_module.o(.text.LCD_Draw_Square) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_Circle) refers to ebi_lcd_module.o(.text.LCD_Draw_Circle) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_Picture) refers to picture.o(.rodata.image_data_320x240x16_2) for image_data_320x240x16_2
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_Picture) refers to ebi_lcd_module.o(.text.LCD_Draw_Picture) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_TetrisBlock) refers to ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) for .Lswitch.table.LCD_Draw_TetrisBlock
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_TetrisBlock) refers to ebi_lcd_module.o(.text.LCD_Draw_TetrisBlock) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Display_Word) refers to picture.o(.rodata.score) for score
+    ebi_lcd_module.o(.text.LCD_Display_Word) refers to picture.o(.rodata.next) for next
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Display_Word) refers to ebi_lcd_module.o(.text.LCD_Display_Word) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_GameField) refers to picture.o(.rodata.grayBlock) for grayBlock
+    ebi_lcd_module.o(.text.LCD_Draw_GameField) refers to picture.o(.rodata.next) for next
+    ebi_lcd_module.o(.text.LCD_Draw_GameField) refers to picture.o(.rodata.score) for score
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_GameField) refers to ebi_lcd_module.o(.text.LCD_Draw_GameField) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_BlockType1) refers to picture.o(.rodata.skyBlueBlock) for skyBlueBlock
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType1) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType1) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_BlockType2) refers to picture.o(.rodata.yellowBlock) for yellowBlock
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType2) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType2) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_BlockType3) refers to picture.o(.rodata.blueBlock) for blueBlock
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType3) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType3) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_BlockType4) refers to picture.o(.rodata.orangeBlock) for orangeBlock
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType4) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType4) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_BlockType5) refers to picture.o(.rodata.greenBlock) for greenBlock
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType5) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType5) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_BlockType6) refers to picture.o(.rodata.redBlock) for redBlock
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType6) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType6) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_BlockType7) refers to picture.o(.rodata.purpleBlock) for purpleBlock
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType7) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType7) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType1) for LCD_Draw_BlockType1
+    ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType4) for LCD_Draw_BlockType4
+    ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType7) for LCD_Draw_BlockType7
+    ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType3) for LCD_Draw_BlockType3
+    ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType5) for LCD_Draw_BlockType5
+    ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType6) for LCD_Draw_BlockType6
+    ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_A_Tetris_Block) refers to ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.Get_TP_X) refers to gpio.o(.text.GPIO_SetMode) for GPIO_SetMode
+    ebi_lcd_module.o(.text.Get_TP_X) refers to eadc.o(.text.EADC_ConfigSampleModule) for EADC_ConfigSampleModule
+    ebi_lcd_module.o(.text.Get_TP_X) refers to ebi_lcd_module.o(.bss.g_u32AdcIntFlag_TP) for g_u32AdcIntFlag_TP
+    ebi_lcd_module.o(.text.Get_TP_X) refers to dflti.o(.text) for __aeabi_i2d
+    ebi_lcd_module.o(.text.Get_TP_X) refers to ddiv.o(.text) for __aeabi_ddiv
+    ebi_lcd_module.o(.text.Get_TP_X) refers to dfixi.o(.text) for __aeabi_d2iz
+    ebi_lcd_module.o(.text.Get_TP_X) refers to printf8.o(i.__0printf$8) for __2printf
+    ebi_lcd_module.o(.ARM.exidx.text.Get_TP_X) refers to ebi_lcd_module.o(.text.Get_TP_X) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.Get_TP_Y) refers to gpio.o(.text.GPIO_SetMode) for GPIO_SetMode
+    ebi_lcd_module.o(.text.Get_TP_Y) refers to eadc.o(.text.EADC_ConfigSampleModule) for EADC_ConfigSampleModule
+    ebi_lcd_module.o(.text.Get_TP_Y) refers to ebi_lcd_module.o(.bss.g_u32AdcIntFlag_TP) for g_u32AdcIntFlag_TP
+    ebi_lcd_module.o(.text.Get_TP_Y) refers to dflti.o(.text) for __aeabi_i2d
+    ebi_lcd_module.o(.text.Get_TP_Y) refers to ddiv.o(.text) for __aeabi_ddiv
+    ebi_lcd_module.o(.text.Get_TP_Y) refers to dfixi.o(.text) for __aeabi_d2iz
+    ebi_lcd_module.o(.text.Get_TP_Y) refers to printf8.o(i.__0printf$8) for __2printf
+    ebi_lcd_module.o(.ARM.exidx.text.Get_TP_Y) refers to ebi_lcd_module.o(.text.Get_TP_Y) for [Anonymous Symbol]
+    ebi_lcd_module.o(.text.EADC01_IRQHandler) refers to ebi_lcd_module.o(.bss.g_u32AdcIntFlag_TP) for g_u32AdcIntFlag_TP
+    ebi_lcd_module.o(.ARM.exidx.text.EADC01_IRQHandler) refers to ebi_lcd_module.o(.text.EADC01_IRQHandler) for [Anonymous Symbol]
+    ebi_lcd_module.o(.ARM.exidx.text.clearCurrentMove) refers to ebi_lcd_module.o(.text.clearCurrentMove) for [Anonymous Symbol]
+    ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) refers to picture.o(.rodata.skyBlueBlock) for skyBlueBlock
+    ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) refers to picture.o(.rodata.blueBlock) for blueBlock
+    ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) refers to picture.o(.rodata.orangeBlock) for orangeBlock
+    ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) refers to picture.o(.rodata.yellowBlock) for yellowBlock
+    ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) refers to picture.o(.rodata.greenBlock) for greenBlock
+    ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) refers to picture.o(.rodata.purpleBlock) for purpleBlock
+    ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) refers to picture.o(.rodata.redBlock) for redBlock
+    ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock) refers to picture.o(.rodata.grayBlock) for grayBlock
+    gamefieldfeature.o(.text.initialTheStartGameStatus) refers to gamefieldfeature.o(.bss.playFieldData) for playFieldData
+    gamefieldfeature.o(.ARM.exidx.text.initialTheStartGameStatus) refers to gamefieldfeature.o(.text.initialTheStartGameStatus) for [Anonymous Symbol]
+    gamefieldfeature.o(.text.isValidStep) refers to gamefieldfeature.o(.bss.playFieldData) for playFieldData
+    gamefieldfeature.o(.ARM.exidx.text.isValidStep) refers to gamefieldfeature.o(.text.isValidStep) for [Anonymous Symbol]
+    system_initialization.o(.ARM.exidx.text.enableHXT) refers to system_initialization.o(.text.enableHXT) for [Anonymous Symbol]
+    system_initialization.o(.ARM.exidx.text.enableLXT) refers to system_initialization.o(.text.enableLXT) for [Anonymous Symbol]
+    system_initialization.o(.ARM.exidx.text.configJoyStickUpRight) refers to system_initialization.o(.text.configJoyStickUpRight) for [Anonymous Symbol]
+    system_initialization.o(.ARM.exidx.text.configJoyStickDownLeft) refers to system_initialization.o(.text.configJoyStickDownLeft) for [Anonymous Symbol]
+    system_initialization.o(.text.configTimer1) refers to ebi_lcd_module.o(.bss.Timer1_flag) for Timer1_flag
+    system_initialization.o(.text.configTimer1) refers to ebi_lcd_module.o(.bss.Timer1_cnt) for Timer1_cnt
+    system_initialization.o(.ARM.exidx.text.configTimer1) refers to system_initialization.o(.text.configTimer1) for [Anonymous Symbol]
+    system_initialization.o(.ARM.exidx.text.configTimer0) refers to system_initialization.o(.text.configTimer0) for [Anonymous Symbol]
+    system_initialization.o(.text.SYS_Init) refers to ebi_lcd_module.o(.bss.Timer1_flag) for Timer1_flag
+    system_initialization.o(.text.SYS_Init) refers to ebi_lcd_module.o(.bss.Timer1_cnt) for Timer1_cnt
+    system_initialization.o(.ARM.exidx.text.SYS_Init) refers to system_initialization.o(.text.SYS_Init) for [Anonymous Symbol]
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to main.o(.bss.currentX) for currentX
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to main.o(.bss.currentY) for currentY
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to main.o(.bss.currentType) for currentType
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to main.o(.bss.currentDirection) for currentDirection
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to ebi_lcd_module.o(.text.clearCurrentMove) for clearCurrentMove
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to main.o(.bss.currentXRLimit) for currentXRLimit
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to main.o(.bss.currentYLimit) for currentYLimit
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType1) for LCD_Draw_BlockType1
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType5) for LCD_Draw_BlockType5
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType6) for LCD_Draw_BlockType6
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType4) for LCD_Draw_BlockType4
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType7) for LCD_Draw_BlockType7
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_BlockType3) for LCD_Draw_BlockType3
+    gpio_interrupt.o(.text.GPG_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) for LCD_Draw_A_Tetris_Block
+    gpio_interrupt.o(.ARM.exidx.text.GPG_IRQHandler) refers to gpio_interrupt.o(.text.GPG_IRQHandler) for [Anonymous Symbol]
+    gpio_interrupt.o(.text.GPC_IRQHandler) refers to main.o(.bss.currentY) for currentY
+    gpio_interrupt.o(.text.GPC_IRQHandler) refers to main.o(.bss.currentX) for currentX
+    gpio_interrupt.o(.text.GPC_IRQHandler) refers to main.o(.bss.currentType) for currentType
+    gpio_interrupt.o(.text.GPC_IRQHandler) refers to main.o(.bss.currentDirection) for currentDirection
+    gpio_interrupt.o(.text.GPC_IRQHandler) refers to ebi_lcd_module.o(.text.clearCurrentMove) for clearCurrentMove
+    gpio_interrupt.o(.text.GPC_IRQHandler) refers to main.o(.bss.currentXLLimit) for currentXLLimit
+    gpio_interrupt.o(.text.GPC_IRQHandler) refers to ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block) for LCD_Draw_A_Tetris_Block
+    gpio_interrupt.o(.text.GPC_IRQHandler) refers to main.o(.bss.currentYLimit) for currentYLimit
+    gpio_interrupt.o(.ARM.exidx.text.GPC_IRQHandler) refers to gpio_interrupt.o(.text.GPC_IRQHandler) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisableCKO) refers to clk.o(.text.CLK_DisableCKO) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisableModuleClock) refers to clk.o(.text.CLK_DisableModuleClock) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableCKO) refers to clk.o(.text.CLK_EnableCKO) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableModuleClock) refers to clk.o(.text.CLK_EnableModuleClock) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_SetModuleClock) refers to clk.o(.text.CLK_SetModuleClock) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_PowerDown) refers to clk.o(.text.CLK_PowerDown) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_Idle) refers to clk.o(.text.CLK_Idle) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetHXTFreq) refers to clk.o(.text.CLK_GetHXTFreq) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetLXTFreq) refers to clk.o(.text.CLK_GetLXTFreq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetPCLK0Freq) refers to system_m480.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.text.CLK_GetPCLK0Freq) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.ARM.exidx.text.CLK_GetPCLK0Freq) refers to clk.o(.text.CLK_GetPCLK0Freq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetPCLK1Freq) refers to system_m480.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.text.CLK_GetPCLK1Freq) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.ARM.exidx.text.CLK_GetPCLK1Freq) refers to clk.o(.text.CLK_GetPCLK1Freq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetHCLKFreq) refers to system_m480.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.text.CLK_GetHCLKFreq) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.ARM.exidx.text.CLK_GetHCLKFreq) refers to clk.o(.text.CLK_GetHCLKFreq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetCPUFreq) refers to system_m480.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.text.CLK_GetCPUFreq) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.ARM.exidx.text.CLK_GetCPUFreq) refers to clk.o(.text.CLK_GetCPUFreq) for [Anonymous Symbol]
+    clk.o(.text.CLK_SetCoreClock) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.text.CLK_SetCoreClock) refers to clk.o(.bss.g_CLK_i32ErrCode) for g_CLK_i32ErrCode
+    clk.o(.text.CLK_SetCoreClock) refers to clk.o(.text.CLK_EnablePLL) for CLK_EnablePLL
+    clk.o(.text.CLK_SetCoreClock) refers to system_m480.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.ARM.exidx.text.CLK_SetCoreClock) refers to clk.o(.text.CLK_SetCoreClock) for [Anonymous Symbol]
+    clk.o(.text.CLK_WaitClockReady) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.text.CLK_WaitClockReady) refers to clk.o(.bss.g_CLK_i32ErrCode) for g_CLK_i32ErrCode
+    clk.o(.ARM.exidx.text.CLK_WaitClockReady) refers to clk.o(.text.CLK_WaitClockReady) for [Anonymous Symbol]
+    clk.o(.text.CLK_EnablePLL) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.text.CLK_EnablePLL) refers to clk.o(.bss.g_CLK_i32ErrCode) for g_CLK_i32ErrCode
+    clk.o(.text.CLK_EnablePLL) refers to clk.o(.rodata.cst4) for .L__const.CLK_GetPLLClockFreq.au8NoTbl
+    clk.o(.ARM.exidx.text.CLK_EnablePLL) refers to clk.o(.text.CLK_EnablePLL) for [Anonymous Symbol]
+    clk.o(.text.CLK_SetHCLK) refers to clk.o(.bss.g_CLK_i32ErrCode) for g_CLK_i32ErrCode
+    clk.o(.text.CLK_SetHCLK) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.text.CLK_SetHCLK) refers to system_m480.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.ARM.exidx.text.CLK_SetHCLK) refers to clk.o(.text.CLK_SetHCLK) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_SetSysTickClockSrc) refers to clk.o(.text.CLK_SetSysTickClockSrc) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableXtalRC) refers to clk.o(.text.CLK_EnableXtalRC) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisableXtalRC) refers to clk.o(.text.CLK_DisableXtalRC) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisablePLL) refers to clk.o(.text.CLK_DisablePLL) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetPLLClockFreq) refers to clk.o(.rodata.cst4) for .L__const.CLK_GetPLLClockFreq.au8NoTbl
+    clk.o(.ARM.exidx.text.CLK_GetPLLClockFreq) refers to clk.o(.text.CLK_GetPLLClockFreq) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableSysTick) refers to clk.o(.text.CLK_EnableSysTick) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisableSysTick) refers to clk.o(.text.CLK_DisableSysTick) for [Anonymous Symbol]
+    clk.o(.text.CLK_SetPowerDownMode) refers to clk.o(.bss.g_CLK_i32ErrCode) for g_CLK_i32ErrCode
+    clk.o(.text.CLK_SetPowerDownMode) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.ARM.exidx.text.CLK_SetPowerDownMode) refers to clk.o(.text.CLK_SetPowerDownMode) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableDPDWKPin) refers to clk.o(.text.CLK_EnableDPDWKPin) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetPMUWKSrc) refers to clk.o(.text.CLK_GetPMUWKSrc) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableSPDWKPin) refers to clk.o(.text.CLK_EnableSPDWKPin) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetModuleClockSource) refers to clk.o(.text.CLK_GetModuleClockSource) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetModuleClockDivider) refers to clk.o(.text.CLK_GetModuleClockDivider) for [Anonymous Symbol]
+    retarget.o(.text.__aeabi_assert) refers to stderr.o(.data) for __stderr
+    retarget.o(.text.__aeabi_assert) refers to fwrite.o(i.fwrite) for fwrite
+    retarget.o(.text.__aeabi_assert) refers to fputs.o(i.fputs) for fputs
+    retarget.o(.ARM.exidx.text.__aeabi_assert) refers to retarget.o(.text.__aeabi_assert) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.abort) refers to retarget.o(.text.abort) for [Anonymous Symbol]
+    retarget.o(.text.ProcessHardFault) refers to printf8.o(i.__0printf$8) for __2printf
+    retarget.o(.text.ProcessHardFault) refers to puts.o(i.puts) for puts
+    retarget.o(.text.ProcessHardFault) refers to retarget.o(.rodata.str1.1) for .Lstr.16
+    retarget.o(.ARM.exidx.text.ProcessHardFault) refers to retarget.o(.text.ProcessHardFault) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.SendChar_ToUART) refers to retarget.o(.text.SendChar_ToUART) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.SendChar) refers to retarget.o(.text.SendChar) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.GetChar) refers to retarget.o(.text.GetChar) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.kbhit) refers to retarget.o(.text.kbhit) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.IsDebugFifoEmpty) refers to retarget.o(.text.IsDebugFifoEmpty) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text._ttywrch) refers to retarget.o(.text._ttywrch) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.fputc) refers to retarget.o(.text.fputc) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.fgetc) refers to retarget.o(.text.fgetc) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.ferror) refers to retarget.o(.text.ferror) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_ClearResetSrc) refers to sys.o(.text.SYS_ClearResetSrc) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_GetBODStatus) refers to sys.o(.text.SYS_GetBODStatus) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_GetResetSrc) refers to sys.o(.text.SYS_GetResetSrc) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_IsRegLocked) refers to sys.o(.text.SYS_IsRegLocked) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_ReadPDID) refers to sys.o(.text.SYS_ReadPDID) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_ResetChip) refers to sys.o(.text.SYS_ResetChip) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_ResetCPU) refers to sys.o(.text.SYS_ResetCPU) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_ResetModule) refers to sys.o(.text.SYS_ResetModule) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_EnableBOD) refers to sys.o(.text.SYS_EnableBOD) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_DisableBOD) refers to sys.o(.text.SYS_DisableBOD) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_SetPowerLevel) refers to sys.o(.text.SYS_SetPowerLevel) for [Anonymous Symbol]
+    sys.o(.ARM.exidx.text.SYS_SetVRef) refers to sys.o(.text.SYS_SetVRef) for [Anonymous Symbol]
+    timer.o(.text.TIMER_Open) refers to clk.o(.text.CLK_GetPCLK0Freq) for CLK_GetPCLK0Freq
+    timer.o(.text.TIMER_Open) refers to timer.o(.rodata.cst32) for .L__const.TIMER_GetModuleClock.au32Clk
+    timer.o(.text.TIMER_Open) refers to clk.o(.text.CLK_GetPCLK1Freq) for CLK_GetPCLK1Freq
+    timer.o(.ARM.exidx.text.TIMER_Open) refers to timer.o(.text.TIMER_Open) for [Anonymous Symbol]
+    timer.o(.text.TIMER_GetModuleClock) refers to clk.o(.text.CLK_GetPCLK0Freq) for CLK_GetPCLK0Freq
+    timer.o(.text.TIMER_GetModuleClock) refers to timer.o(.rodata.cst32) for .L__const.TIMER_GetModuleClock.au32Clk
+    timer.o(.text.TIMER_GetModuleClock) refers to clk.o(.text.CLK_GetPCLK1Freq) for CLK_GetPCLK1Freq
+    timer.o(.ARM.exidx.text.TIMER_GetModuleClock) refers to timer.o(.text.TIMER_GetModuleClock) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_Close) refers to timer.o(.text.TIMER_Close) for [Anonymous Symbol]
+    timer.o(.text.TIMER_Delay) refers to timer.o(.rodata.cst32) for .L__const.TIMER_GetModuleClock.au32Clk
+    timer.o(.text.TIMER_Delay) refers to clk.o(.text.CLK_GetPCLK0Freq) for CLK_GetPCLK0Freq
+    timer.o(.text.TIMER_Delay) refers to clk.o(.text.CLK_GetPCLK1Freq) for CLK_GetPCLK1Freq
+    timer.o(.text.TIMER_Delay) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    timer.o(.ARM.exidx.text.TIMER_Delay) refers to timer.o(.text.TIMER_Delay) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_EnableCapture) refers to timer.o(.text.TIMER_EnableCapture) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_DisableCapture) refers to timer.o(.text.TIMER_DisableCapture) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_EnableEventCounter) refers to timer.o(.text.TIMER_EnableEventCounter) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_DisableEventCounter) refers to timer.o(.text.TIMER_DisableEventCounter) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_EnableFreqCounter) refers to timer.o(.text.TIMER_EnableFreqCounter) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_DisableFreqCounter) refers to timer.o(.text.TIMER_DisableFreqCounter) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_SetTriggerSource) refers to timer.o(.text.TIMER_SetTriggerSource) for [Anonymous Symbol]
+    timer.o(.ARM.exidx.text.TIMER_SetTriggerTarget) refers to timer.o(.text.TIMER_SetTriggerTarget) for [Anonymous Symbol]
+    timer.o(.text.TIMER_ResetCounter) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    timer.o(.text.TIMER_ResetCounter) refers to clk.o(.text.CLK_GetPCLK0Freq) for CLK_GetPCLK0Freq
+    timer.o(.text.TIMER_ResetCounter) refers to timer.o(.rodata.cst32) for .L__const.TIMER_GetModuleClock.au32Clk
+    timer.o(.text.TIMER_ResetCounter) refers to clk.o(.text.CLK_GetPCLK1Freq) for CLK_GetPCLK1Freq
+    timer.o(.ARM.exidx.text.TIMER_ResetCounter) refers to timer.o(.text.TIMER_ResetCounter) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_ClearIntFlag) refers to uart.o(.text.UART_ClearIntFlag) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_Close) refers to uart.o(.text.UART_Close) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_DisableFlowCtrl) refers to uart.o(.text.UART_DisableFlowCtrl) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_DisableInt) refers to uart.o(.text.UART_DisableInt) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_EnableFlowCtrl) refers to uart.o(.text.UART_EnableFlowCtrl) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_EnableInt) refers to uart.o(.text.UART_EnableInt) for [Anonymous Symbol]
+    uart.o(.text.UART_Open) refers to clk.o(.text.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(.ARM.exidx.text.UART_Open) refers to uart.o(.text.UART_Open) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_Read) refers to uart.o(.text.UART_Read) for [Anonymous Symbol]
+    uart.o(.text.UART_SetLineConfig) refers to clk.o(.text.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(.ARM.exidx.text.UART_SetLineConfig) refers to uart.o(.text.UART_SetLineConfig) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_SetTimeoutCnt) refers to uart.o(.text.UART_SetTimeoutCnt) for [Anonymous Symbol]
+    uart.o(.text.UART_SelectIrDAMode) refers to clk.o(.text.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(.ARM.exidx.text.UART_SelectIrDAMode) refers to uart.o(.text.UART_SelectIrDAMode) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_SelectRS485Mode) refers to uart.o(.text.UART_SelectRS485Mode) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_SelectLINMode) refers to uart.o(.text.UART_SelectLINMode) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART_Write) refers to uart.o(.text.UART_Write) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_SetMode) refers to gpio.o(.text.GPIO_SetMode) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_EnableInt) refers to gpio.o(.text.GPIO_EnableInt) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_DisableInt) refers to gpio.o(.text.GPIO_DisableInt) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_SetSlewCtl) refers to gpio.o(.text.GPIO_SetSlewCtl) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_SetPullCtl) refers to gpio.o(.text.GPIO_SetPullCtl) for [Anonymous Symbol]
+    eadc.o(.text.EADC_Open) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    eadc.o(.text.EADC_Open) refers to eadc.o(.bss.g_EADC_i32ErrCode) for g_EADC_i32ErrCode
+    eadc.o(.ARM.exidx.text.EADC_Open) refers to eadc.o(.text.EADC_Open) for [Anonymous Symbol]
+    eadc.o(.ARM.exidx.text.EADC_Close) refers to eadc.o(.text.EADC_Close) for [Anonymous Symbol]
+    eadc.o(.ARM.exidx.text.EADC_ConfigSampleModule) refers to eadc.o(.text.EADC_ConfigSampleModule) for [Anonymous Symbol]
+    eadc.o(.ARM.exidx.text.EADC_SetTriggerDelayTime) refers to eadc.o(.text.EADC_SetTriggerDelayTime) for [Anonymous Symbol]
+    eadc.o(.ARM.exidx.text.EADC_SetExtendSampleTime) refers to eadc.o(.text.EADC_SetExtendSampleTime) for [Anonymous Symbol]
+    ebi.o(.ARM.exidx.text.EBI_Open) refers to ebi.o(.text.EBI_Open) for [Anonymous Symbol]
+    ebi.o(.ARM.exidx.text.EBI_Close) refers to ebi.o(.text.EBI_Close) for [Anonymous Symbol]
+    ebi.o(.ARM.exidx.text.EBI_SetBusTiming) refers to ebi.o(.text.EBI_SetBusTiming) for [Anonymous Symbol]
+    trng.o(.text.TRNG_Open) refers to system_m480.o(.data.SystemCoreClock) for SystemCoreClock
+    trng.o(.ARM.exidx.text.TRNG_Open) refers to trng.o(.text.TRNG_Open) for [Anonymous Symbol]
+    trng.o(.text.TRNG_GenWord) refers to clk.o(.text.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    trng.o(.ARM.exidx.text.TRNG_GenWord) refers to trng.o(.text.TRNG_GenWord) for [Anonymous Symbol]
+    trng.o(.text.TRNG_GenBignum) refers to clk.o(.text.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    trng.o(.ARM.exidx.text.TRNG_GenBignum) refers to trng.o(.text.TRNG_GenBignum) for [Anonymous Symbol]
+    trng.o(.text.TRNG_GenBignumHex) refers to clk.o(.text.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    trng.o(.ARM.exidx.text.TRNG_GenBignumHex) refers to trng.o(.text.TRNG_GenBignumHex) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    fputs.o(i.fputs) refers to retarget.o(.text.fputc) for fputc
+    puts.o(i.puts) refers to retarget.o(.text.fputc) for fputc
+    puts.o(i.puts) refers to retarget.o(.bss.__stdout) for __stdout
+    fwrite.o(i.fwrite) refers to retarget.o(.text.fputc) for fputc
+    fputs_e.o(.text) refers to retarget.o(.text.fputc) for fputc
+    puts_e.o(.text) refers to retarget.o(.text.fputc) for fputc
+    puts_e.o(.text) refers to retarget.o(.bss.__stdout) for __stdout
+    fwrite_e.o(.text) refers to retarget.o(.text.fputc) for fputc
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to retarget.o(.text.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to retarget.o(.text.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to retarget.o(.bss.__stdout) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to retarget.o(.text.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to retarget.o(.text.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to retarget.o(.bss.__stdout) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to retarget.o(.text.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to retarget.o(.text.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to retarget.o(.bss.__stdout) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to retarget.o(.text.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to retarget.o(.text.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to retarget.o(.bss.__stdout) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to retarget.o(.text.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to retarget.o(.text.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to retarget.o(.bss.__stdout) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to retarget.o(.text.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to retarget.o(.text.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to retarget.o(.bss.__stdout) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to retarget.o(.text.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to retarget.o(.text.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to retarget.o(.bss.__stdout) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to retarget.o(.text.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to retarget.o(.text.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to retarget.o(.bss.__stdout) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to retarget.o(.text.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to retarget.o(.text.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to retarget.o(.bss.__stdout) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to retarget.o(.text.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to retarget.o(.text.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to retarget.o(.bss.__stdout) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to retarget.o(.text.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to retarget.o(.text.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to retarget.o(.bss.__stdout) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to retarget.o(.text.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to retarget.o(.text.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to retarget.o(.bss.__stdout) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to retarget.o(.text.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to retarget.o(.text.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to retarget.o(.bss.__stdout) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to retarget.o(.text.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to retarget.o(.text.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to retarget.o(.bss.__stdout) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to retarget.o(.text.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to retarget.o(.text.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to retarget.o(.bss.__stdout) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to retarget.o(.text.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to retarget.o(.text.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to retarget.o(.bss.__stdout) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to retarget.o(.text.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to retarget.o(.text.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to retarget.o(.bss.__stdout) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to retarget.o(.text.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to retarget.o(.text.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to retarget.o(.bss.__stdout) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to retarget.o(.text.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to retarget.o(.text.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to retarget.o(.bss.__stdout) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to retarget.o(.text.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to retarget.o(.text.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to retarget.o(.bss.__stdout) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to retarget.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to retarget.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers to retarget.o(.bss.__stdout) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to retarget.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to retarget.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to retarget.o(.bss.__stdout) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_m480.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_m480.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_m480.o(.text), (0 bytes).
+    Removing system_m480.o(.text.SystemCoreClockUpdate), (104 bytes).
+    Removing system_m480.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_m480.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_m480.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_m480.o(.data.PllClock), (4 bytes).
+    Removing system_m480.o(.data.gau32ClkSrcTbl), (32 bytes).
+    Removing startup_m480.o(HEAP), (256 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.text.generateNewBlock), (2 bytes).
+    Removing main.o(.ARM.exidx.text.generateNewBlock), (8 bytes).
+    Removing main.o(.ARM.exidx.text.TMR0_IRQHandler), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing ebi_lcd_module.o(.text), (0 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.TMR1_IRQHandler), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_WR_REG), (24 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_WR_REG), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_WR_DATA), (10 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_WR_DATA), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_RD_DATA), (10 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_RD_DATA), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_SetWindow), (88 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_SetWindow), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.ILI9341_Initial), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_PutChar8x16), (498 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_PutChar8x16), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_PutString), (74 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_PutString), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_PutChar16x32), (394 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_PutChar16x32), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_Draw_Rectangle), (646 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_Rectangle), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_BlankArea), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_Draw_Square), (546 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_Square), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_Draw_Circle), (278 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_Circle), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_Draw_Picture), (452 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_Picture), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_Draw_TetrisBlock), (302 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_TetrisBlock), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_Display_Word), (514 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Display_Word), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_GameField), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType1), (8 bytes).
+    Removing ebi_lcd_module.o(.text.LCD_Draw_BlockType2), (968 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType2), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType3), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType4), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType5), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType6), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_BlockType7), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.LCD_Draw_A_Tetris_Block), (8 bytes).
+    Removing ebi_lcd_module.o(.text.Get_TP_X), (272 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.Get_TP_X), (8 bytes).
+    Removing ebi_lcd_module.o(.text.Get_TP_Y), (276 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.Get_TP_Y), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.EADC01_IRQHandler), (8 bytes).
+    Removing ebi_lcd_module.o(.ARM.exidx.text.clearCurrentMove), (8 bytes).
+    Removing ebi_lcd_module.o(.rodata..Lswitch.table.LCD_Draw_TetrisBlock), (32 bytes).
+    Removing image.o(.text), (0 bytes).
+    Removing image.o(.rodata.Font8x16), (2048 bytes).
+    Removing image_16x32.o(.text), (0 bytes).
+    Removing image_16x32.o(.rodata.Font16x32), (832 bytes).
+    Removing picture.o(.text), (0 bytes).
+    Removing picture.o(.rodata.yellowBlock), (200 bytes).
+    Removing picture.o(.rodata.image_data_320x240x16), (153600 bytes).
+    Removing picture.o(.rodata.image_data_320x240x16_2), (153600 bytes).
+    Removing gamefieldfeature.o(.text), (0 bytes).
+    Removing gamefieldfeature.o(.text.initialTheStartGameStatus), (242 bytes).
+    Removing gamefieldfeature.o(.ARM.exidx.text.initialTheStartGameStatus), (8 bytes).
+    Removing gamefieldfeature.o(.ARM.exidx.text.isValidStep), (8 bytes).
+    Removing gamefieldfeature.o(.bss.highestScoreVal), (4 bytes).
+    Removing gamefieldfeature.o(.bss.scoreVal), (4 bytes).
+    Removing gamefieldfeature.o(.bss.stage), (4 bytes).
+    Removing system_initialization.o(.text), (0 bytes).
+    Removing system_initialization.o(.text.enableHXT), (66 bytes).
+    Removing system_initialization.o(.ARM.exidx.text.enableHXT), (8 bytes).
+    Removing system_initialization.o(.text.enableLXT), (70 bytes).
+    Removing system_initialization.o(.ARM.exidx.text.enableLXT), (8 bytes).
+    Removing system_initialization.o(.text.configJoyStickUpRight), (58 bytes).
+    Removing system_initialization.o(.ARM.exidx.text.configJoyStickUpRight), (8 bytes).
+    Removing system_initialization.o(.text.configJoyStickDownLeft), (58 bytes).
+    Removing system_initialization.o(.ARM.exidx.text.configJoyStickDownLeft), (8 bytes).
+    Removing system_initialization.o(.text.configTimer1), (138 bytes).
+    Removing system_initialization.o(.ARM.exidx.text.configTimer1), (8 bytes).
+    Removing system_initialization.o(.text.configTimer0), (90 bytes).
+    Removing system_initialization.o(.ARM.exidx.text.configTimer0), (8 bytes).
+    Removing system_initialization.o(.ARM.exidx.text.SYS_Init), (8 bytes).
+    Removing gpio_interrupt.o(.text), (0 bytes).
+    Removing gpio_interrupt.o(.ARM.exidx.text.GPG_IRQHandler), (8 bytes).
+    Removing gpio_interrupt.o(.ARM.exidx.text.GPC_IRQHandler), (8 bytes).
+    Removing clk.o(.text), (0 bytes).
+    Removing clk.o(.text.CLK_DisableCKO), (18 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisableCKO), (8 bytes).
+    Removing clk.o(.text.CLK_DisableModuleClock), (36 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisableModuleClock), (8 bytes).
+    Removing clk.o(.text.CLK_EnableCKO), (38 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableCKO), (8 bytes).
+    Removing clk.o(.text.CLK_EnableModuleClock), (34 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableModuleClock), (8 bytes).
+    Removing clk.o(.text.CLK_SetModuleClock), (158 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetModuleClock), (8 bytes).
+    Removing clk.o(.text.CLK_PowerDown), (50 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_PowerDown), (8 bytes).
+    Removing clk.o(.text.CLK_Idle), (36 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_Idle), (8 bytes).
+    Removing clk.o(.text.CLK_GetHXTFreq), (28 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetHXTFreq), (8 bytes).
+    Removing clk.o(.text.CLK_GetLXTFreq), (20 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetLXTFreq), (8 bytes).
+    Removing clk.o(.text.CLK_GetPCLK0Freq), (128 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetPCLK0Freq), (8 bytes).
+    Removing clk.o(.text.CLK_GetPCLK1Freq), (130 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetPCLK1Freq), (8 bytes).
+    Removing clk.o(.text.CLK_GetHCLKFreq), (18 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetHCLKFreq), (8 bytes).
+    Removing clk.o(.text.CLK_GetCPUFreq), (18 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetCPUFreq), (8 bytes).
+    Removing clk.o(.text.CLK_SetCoreClock), (336 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetCoreClock), (8 bytes).
+    Removing clk.o(.text.CLK_WaitClockReady), (108 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_WaitClockReady), (8 bytes).
+    Removing clk.o(.text.CLK_EnablePLL), (1364 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnablePLL), (8 bytes).
+    Removing clk.o(.text.CLK_SetHCLK), (168 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetHCLK), (8 bytes).
+    Removing clk.o(.text.CLK_SetSysTickClockSrc), (20 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetSysTickClockSrc), (8 bytes).
+    Removing clk.o(.text.CLK_EnableXtalRC), (16 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableXtalRC), (8 bytes).
+    Removing clk.o(.text.CLK_DisableXtalRC), (18 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisableXtalRC), (8 bytes).
+    Removing clk.o(.text.CLK_DisablePLL), (18 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisablePLL), (8 bytes).
+    Removing clk.o(.text.CLK_GetPLLClockFreq), (86 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetPLLClockFreq), (8 bytes).
+    Removing clk.o(.text.CLK_EnableSysTick), (64 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableSysTick), (8 bytes).
+    Removing clk.o(.text.CLK_DisableSysTick), (14 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisableSysTick), (8 bytes).
+    Removing clk.o(.text.CLK_SetPowerDownMode), (168 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetPowerDownMode), (8 bytes).
+    Removing clk.o(.text.CLK_EnableDPDWKPin), (86 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableDPDWKPin), (8 bytes).
+    Removing clk.o(.text.CLK_GetPMUWKSrc), (12 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetPMUWKSrc), (8 bytes).
+    Removing clk.o(.text.CLK_EnableSPDWKPin), (40 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableSPDWKPin), (8 bytes).
+    Removing clk.o(.text.CLK_GetModuleClockSource), (180 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetModuleClockSource), (8 bytes).
+    Removing clk.o(.text.CLK_GetModuleClockDivider), (100 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetModuleClockDivider), (8 bytes).
+    Removing clk.o(.bss.g_CLK_i32ErrCode), (4 bytes).
+    Removing clk.o(.rodata.cst4), (4 bytes).
+    Removing retarget.o(.text), (0 bytes).
+    Removing retarget.o(.text.__aeabi_assert), (316 bytes).
+    Removing retarget.o(.ARM.exidx.text.__aeabi_assert), (8 bytes).
+    Removing retarget.o(.text.abort), (2 bytes).
+    Removing retarget.o(.ARM.exidx.text.abort), (8 bytes).
+    Removing retarget.o(.ARM.exidx.text.ProcessHardFault), (8 bytes).
+    Removing retarget.o(.text.SendChar_ToUART), (74 bytes).
+    Removing retarget.o(.ARM.exidx.text.SendChar_ToUART), (8 bytes).
+    Removing retarget.o(.text.SendChar), (74 bytes).
+    Removing retarget.o(.ARM.exidx.text.SendChar), (8 bytes).
+    Removing retarget.o(.text.GetChar), (40 bytes).
+    Removing retarget.o(.ARM.exidx.text.GetChar), (8 bytes).
+    Removing retarget.o(.text.kbhit), (14 bytes).
+    Removing retarget.o(.ARM.exidx.text.kbhit), (8 bytes).
+    Removing retarget.o(.text.IsDebugFifoEmpty), (14 bytes).
+    Removing retarget.o(.ARM.exidx.text.IsDebugFifoEmpty), (8 bytes).
+    Removing retarget.o(.text._ttywrch), (74 bytes).
+    Removing retarget.o(.ARM.exidx.text._ttywrch), (8 bytes).
+    Removing retarget.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing retarget.o(.text.fgetc), (40 bytes).
+    Removing retarget.o(.ARM.exidx.text.fgetc), (8 bytes).
+    Removing retarget.o(.text.ferror), (6 bytes).
+    Removing retarget.o(.ARM.exidx.text.ferror), (8 bytes).
+    Removing retarget.o(.bss.__stdin), (84 bytes).
+    Removing sys.o(.text), (0 bytes).
+    Removing sys.o(.text.SYS_ClearResetSrc), (14 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_ClearResetSrc), (8 bytes).
+    Removing sys.o(.text.SYS_GetBODStatus), (14 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_GetBODStatus), (8 bytes).
+    Removing sys.o(.text.SYS_GetResetSrc), (10 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_GetResetSrc), (8 bytes).
+    Removing sys.o(.text.SYS_IsRegLocked), (18 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_IsRegLocked), (8 bytes).
+    Removing sys.o(.text.SYS_ReadPDID), (8 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_ReadPDID), (8 bytes).
+    Removing sys.o(.text.SYS_ResetChip), (16 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_ResetChip), (8 bytes).
+    Removing sys.o(.text.SYS_ResetCPU), (16 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_ResetCPU), (8 bytes).
+    Removing sys.o(.text.SYS_ResetModule), (36 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_ResetModule), (8 bytes).
+    Removing sys.o(.text.SYS_EnableBOD), (36 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_EnableBOD), (8 bytes).
+    Removing sys.o(.text.SYS_DisableBOD), (16 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_DisableBOD), (8 bytes).
+    Removing sys.o(.text.SYS_SetPowerLevel), (20 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_SetPowerLevel), (8 bytes).
+    Removing sys.o(.text.SYS_SetVRef), (18 bytes).
+    Removing sys.o(.ARM.exidx.text.SYS_SetVRef), (8 bytes).
+    Removing timer.o(.text), (0 bytes).
+    Removing timer.o(.text.TIMER_Open), (170 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_Open), (8 bytes).
+    Removing timer.o(.text.TIMER_GetModuleClock), (104 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_GetModuleClock), (8 bytes).
+    Removing timer.o(.text.TIMER_Close), (8 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_Close), (8 bytes).
+    Removing timer.o(.text.TIMER_Delay), (430 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_Delay), (8 bytes).
+    Removing timer.o(.text.TIMER_EnableCapture), (24 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_EnableCapture), (8 bytes).
+    Removing timer.o(.text.TIMER_DisableCapture), (10 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_DisableCapture), (8 bytes).
+    Removing timer.o(.text.TIMER_EnableEventCounter), (20 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_EnableEventCounter), (8 bytes).
+    Removing timer.o(.text.TIMER_DisableEventCounter), (10 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_DisableEventCounter), (8 bytes).
+    Removing timer.o(.text.TIMER_EnableFreqCounter), (66 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_EnableFreqCounter), (8 bytes).
+    Removing timer.o(.text.TIMER_DisableFreqCounter), (10 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_DisableFreqCounter), (8 bytes).
+    Removing timer.o(.text.TIMER_SetTriggerSource), (12 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_SetTriggerSource), (8 bytes).
+    Removing timer.o(.text.TIMER_SetTriggerTarget), (12 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_SetTriggerTarget), (8 bytes).
+    Removing timer.o(.text.TIMER_ResetCounter), (216 bytes).
+    Removing timer.o(.ARM.exidx.text.TIMER_ResetCounter), (8 bytes).
+    Removing timer.o(.rodata.cst32), (32 bytes).
+    Removing uart.o(.text), (0 bytes).
+    Removing uart.o(.text.UART_ClearIntFlag), (62 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_ClearIntFlag), (8 bytes).
+    Removing uart.o(.text.UART_Close), (6 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_Close), (8 bytes).
+    Removing uart.o(.text.UART_DisableFlowCtrl), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_DisableFlowCtrl), (8 bytes).
+    Removing uart.o(.text.UART_DisableInt), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_DisableInt), (8 bytes).
+    Removing uart.o(.text.UART_EnableFlowCtrl), (26 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_EnableFlowCtrl), (8 bytes).
+    Removing uart.o(.text.UART_EnableInt), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_EnableInt), (8 bytes).
+    Removing uart.o(.text.UART_Open), (372 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_Open), (8 bytes).
+    Removing uart.o(.text.UART_Read), (190 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_Read), (8 bytes).
+    Removing uart.o(.text.UART_SetLineConfig), (344 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_SetLineConfig), (8 bytes).
+    Removing uart.o(.text.UART_SetTimeoutCnt), (20 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_SetTimeoutCnt), (8 bytes).
+    Removing uart.o(.text.UART_SelectIrDAMode), (358 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_SelectIrDAMode), (8 bytes).
+    Removing uart.o(.text.UART_SelectRS485Mode), (34 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_SelectRS485Mode), (8 bytes).
+    Removing uart.o(.text.UART_SelectLINMode), (22 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_SelectLINMode), (8 bytes).
+    Removing uart.o(.text.UART_Write), (190 bytes).
+    Removing uart.o(.ARM.exidx.text.UART_Write), (8 bytes).
+    Removing uart.o(.rodata.cst16), (16 bytes).
+    Removing gpio.o(.text), (0 bytes).
+    Removing gpio.o(.text.GPIO_SetMode), (264 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_SetMode), (8 bytes).
+    Removing gpio.o(.text.GPIO_EnableInt), (50 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_EnableInt), (8 bytes).
+    Removing gpio.o(.text.GPIO_DisableInt), (30 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_DisableInt), (8 bytes).
+    Removing gpio.o(.text.GPIO_SetSlewCtl), (264 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_SetSlewCtl), (8 bytes).
+    Removing gpio.o(.text.GPIO_SetPullCtl), (264 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_SetPullCtl), (8 bytes).
+    Removing eadc.o(.text), (0 bytes).
+    Removing eadc.o(.text.EADC_Open), (104 bytes).
+    Removing eadc.o(.ARM.exidx.text.EADC_Open), (8 bytes).
+    Removing eadc.o(.text.EADC_Close), (10 bytes).
+    Removing eadc.o(.ARM.exidx.text.EADC_Close), (8 bytes).
+    Removing eadc.o(.text.EADC_ConfigSampleModule), (38 bytes).
+    Removing eadc.o(.ARM.exidx.text.EADC_ConfigSampleModule), (8 bytes).
+    Removing eadc.o(.text.EADC_SetTriggerDelayTime), (36 bytes).
+    Removing eadc.o(.ARM.exidx.text.EADC_SetTriggerDelayTime), (8 bytes).
+    Removing eadc.o(.text.EADC_SetExtendSampleTime), (30 bytes).
+    Removing eadc.o(.ARM.exidx.text.EADC_SetExtendSampleTime), (8 bytes).
+    Removing eadc.o(.bss.g_EADC_i32ErrCode), (4 bytes).
+    Removing ebi.o(.text), (0 bytes).
+    Removing ebi.o(.text.EBI_Open), (292 bytes).
+    Removing ebi.o(.ARM.exidx.text.EBI_Open), (8 bytes).
+    Removing ebi.o(.text.EBI_Close), (18 bytes).
+    Removing ebi.o(.ARM.exidx.text.EBI_Close), (8 bytes).
+    Removing ebi.o(.text.EBI_SetBusTiming), (36 bytes).
+    Removing ebi.o(.ARM.exidx.text.EBI_SetBusTiming), (8 bytes).
+    Removing trng.o(.text), (0 bytes).
+    Removing trng.o(.text.TRNG_Open), (128 bytes).
+    Removing trng.o(.ARM.exidx.text.TRNG_Open), (8 bytes).
+    Removing trng.o(.text.TRNG_GenWord), (336 bytes).
+    Removing trng.o(.ARM.exidx.text.TRNG_GenWord), (8 bytes).
+    Removing trng.o(.text.TRNG_GenBignum), (152 bytes).
+    Removing trng.o(.ARM.exidx.text.TRNG_GenBignum), (8 bytes).
+    Removing trng.o(.text.TRNG_GenBignumHex), (206 bytes).
+    Removing trng.o(.ARM.exidx.text.TRNG_GenBignumHex), (8 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dflti.o(.text), (34 bytes).
+    Removing dfixi.o(.text), (62 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing dfixul.o(.text), (48 bytes).
+    Removing cdrcmple.o(.text), (48 bytes).
+
+310 unused section(s) (total 328642 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    ../clib/microlib/stdio/fputs.c           0x00000000   Number         0  fputs.o ABSOLUTE
+    ../clib/microlib/stdio/fputs.c           0x00000000   Number         0  fputs_e.o ABSOLUTE
+    ../clib/microlib/stdio/fwrite.c          0x00000000   Number         0  fwrite.o ABSOLUTE
+    ../clib/microlib/stdio/fwrite.c          0x00000000   Number         0  fwrite_e.o ABSOLUTE
+    ../clib/microlib/stdio/puts.c            0x00000000   Number         0  puts.o ABSOLUTE
+    ../clib/microlib/stdio/puts.c            0x00000000   Number         0  puts_e.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stderr.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    EBI_LCD_Module.c                         0x00000000   Number         0  ebi_lcd_module.o ABSOLUTE
+    GPIO_Interrupt.c                         0x00000000   Number         0  gpio_interrupt.o ABSOLUTE
+    GameFieldFeature.c                       0x00000000   Number         0  gamefieldfeature.o ABSOLUTE
+    Library/Device/Nuvoton/M480/Source/ARM/startup_M480.s 0x00000000   Number         0  startup_m480.o ABSOLUTE
+    System_Initialization.c                  0x00000000   Number         0  system_initialization.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    clk.c                                    0x00000000   Number         0  clk.o ABSOLUTE
+    eadc.c                                   0x00000000   Number         0  eadc.o ABSOLUTE
+    ebi.c                                    0x00000000   Number         0  ebi.o ABSOLUTE
+    gpio.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    image.c                                  0x00000000   Number         0  image.o ABSOLUTE
+    image_16x32.c                            0x00000000   Number         0  image_16x32.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    picture.c                                0x00000000   Number         0  picture.o ABSOLUTE
+    retarget.c                               0x00000000   Number         0  retarget.o ABSOLUTE
+    sys.c                                    0x00000000   Number         0  sys.o ABSOLUTE
+    system_M480.c                            0x00000000   Number         0  system_m480.o ABSOLUTE
+    timer.c                                  0x00000000   Number         0  timer.o ABSOLUTE
+    trng.c                                   0x00000000   Number         0  trng.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
+    RESET                                    0x00000000   Section      500  startup_m480.o(RESET)
+    .ARM.Collect$$$$00000000                 0x000001f4   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000001f4   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000001f8   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000001fc   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000001fc   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000001fc   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x00000204   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x00000204   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000204   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000204   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    $v0                                      0x00000208   Number         0  startup_m480.o(.text)
+    .text                                    0x00000208   Section      124  startup_m480.o(.text)
+    Default_Handler                          0x00000269   Thumb Code     2  startup_m480.o(.text)
+    .text                                    0x00000284   Section        0  uldiv.o(.text)
+    .text                                    0x000002e6   Section        0  llushr.o(.text)
+    .text                                    0x00000308   Section       48  init.o(.text)
+    .text                                    0x00000338   Section        0  llshl.o(.text)
+    [Anonymous Symbol]                       0x00000358   Section        0  ebi_lcd_module.o(.text.EADC01_IRQHandler)
+    [Anonymous Symbol]                       0x00000374   Section        0  gpio_interrupt.o(.text.GPC_IRQHandler)
+    [Anonymous Symbol]                       0x00000440   Section        0  gpio_interrupt.o(.text.GPG_IRQHandler)
+    [Anonymous Symbol]                       0x000006e0   Section        0  ebi_lcd_module.o(.text.ILI9341_Initial)
+    [Anonymous Symbol]                       0x000009d0   Section        0  ebi_lcd_module.o(.text.LCD_BlankArea)
+    [Anonymous Symbol]                       0x00000c58   Section        0  ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block)
+    [Anonymous Symbol]                       0x00000c9c   Section        0  ebi_lcd_module.o(.text.LCD_Draw_BlockType1)
+    [Anonymous Symbol]                       0x00001074   Section        0  ebi_lcd_module.o(.text.LCD_Draw_BlockType3)
+    [Anonymous Symbol]                       0x00002c50   Section        0  ebi_lcd_module.o(.text.LCD_Draw_BlockType4)
+    [Anonymous Symbol]                       0x000047dc   Section        0  ebi_lcd_module.o(.text.LCD_Draw_BlockType5)
+    [Anonymous Symbol]                       0x0000556c   Section        0  ebi_lcd_module.o(.text.LCD_Draw_BlockType6)
+    [Anonymous Symbol]                       0x0000633c   Section        0  ebi_lcd_module.o(.text.LCD_Draw_BlockType7)
+    [Anonymous Symbol]                       0x00007f38   Section        0  ebi_lcd_module.o(.text.LCD_Draw_GameField)
+    [Anonymous Symbol]                       0x00008e3c   Section        0  retarget.o(.text.ProcessHardFault)
+    [Anonymous Symbol]                       0x00008fd8   Section        0  system_initialization.o(.text.SYS_Init)
+    [Anonymous Symbol]                       0x0000942c   Section        0  system_m480.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x0000949c   Section        0  main.o(.text.TMR0_IRQHandler)
+    [Anonymous Symbol]                       0x00009508   Section        0  ebi_lcd_module.o(.text.TMR1_IRQHandler)
+    [Anonymous Symbol]                       0x00009534   Section        0  ebi_lcd_module.o(.text.clearCurrentMove)
+    [Anonymous Symbol]                       0x0000b2a0   Section        0  retarget.o(.text.fputc)
+    [Anonymous Symbol]                       0x0000b2ec   Section        0  gamefieldfeature.o(.text.isValidStep)
+    [Anonymous Symbol]                       0x0000b4f4   Section        0  main.o(.text.main)
+    i.__0printf$8                            0x0000b654   Section        0  printf8.o(i.__0printf$8)
+    i.__scatterload_copy                     0x0000b674   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000b682   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0000b684   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _printf_core                             0x0000b695   Thumb Code   996  printf8.o(i._printf_core)
+    i._printf_core                           0x0000b694   Section        0  printf8.o(i._printf_core)
+    _printf_post_padding                     0x0000baa5   Thumb Code    36  printf8.o(i._printf_post_padding)
+    i._printf_post_padding                   0x0000baa4   Section        0  printf8.o(i._printf_post_padding)
+    _printf_pre_padding                      0x0000bac9   Thumb Code    46  printf8.o(i._printf_pre_padding)
+    i._printf_pre_padding                    0x0000bac8   Section        0  printf8.o(i._printf_pre_padding)
+    i.puts                                   0x0000baf8   Section        0  puts.o(i.puts)
+    .L.str.8                                 0x0000c2b0   Data          32  retarget.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0000c2b0   Section        0  retarget.o(.rodata.str1.1)
+    .L.str.11                                0x0000c2d0   Data          29  retarget.o(.rodata.str1.1)
+    .L.str.7                                 0x0000c2ed   Data          27  retarget.o(.rodata.str1.1)
+    .L.str.9                                 0x0000c308   Data           4  retarget.o(.rodata.str1.1)
+    .L.str.10                                0x0000c30c   Data           4  retarget.o(.rodata.str1.1)
+    .Lstr.16                                 0x0000c310   Data          35  retarget.o(.rodata.str1.1)
+    STACK                                    0x20000700   Section     2048  startup_m480.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_m480.o(RESET)
+    _printf_a                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  printfstubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  printfstubs.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000001f4   Data           0  startup_m480.o(RESET)
+    __Vectors_Size                           0x000001f4   Number         0  startup_m480.o ABSOLUTE
+    __main                                   0x000001f5   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000001f5   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000001f9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000001fd   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000001fd   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000001fd   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000001fd   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000205   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000205   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x00000209   Thumb Code    64  startup_m480.o(.text)
+    NMI_Handler                              0x00000249   Thumb Code     2  startup_m480.o(.text)
+    HardFault_Handler                        0x0000024b   Thumb Code    16  startup_m480.o(.text)
+    MemManage_Handler                        0x0000025b   Thumb Code     2  startup_m480.o(.text)
+    BusFault_Handler                         0x0000025d   Thumb Code     2  startup_m480.o(.text)
+    UsageFault_Handler                       0x0000025f   Thumb Code     2  startup_m480.o(.text)
+    SVC_Handler                              0x00000261   Thumb Code     2  startup_m480.o(.text)
+    DebugMon_Handler                         0x00000263   Thumb Code     2  startup_m480.o(.text)
+    PendSV_Handler                           0x00000265   Thumb Code     2  startup_m480.o(.text)
+    SysTick_Handler                          0x00000267   Thumb Code     2  startup_m480.o(.text)
+    ACMP01_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    BOD_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    BPWM0_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    BPWM1_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    BRAKE0_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    BRAKE1_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    CAN0_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    CAN1_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    CAN2_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    CCAP_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    CKFAIL_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    CRYPTO_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    DAC_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EADC00_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EADC02_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EADC03_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EADC10_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EADC11_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EADC12_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EADC13_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    ECAP0_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    ECAP1_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EHCI_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EINT0_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EINT1_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EINT2_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EINT3_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EINT4_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EINT5_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EINT6_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EINT7_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EMAC_RX_IRQHandler                       0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EMAC_TX_IRQHandler                       0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EPWM0P0_IRQHandler                       0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EPWM0P1_IRQHandler                       0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EPWM0P2_IRQHandler                       0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EPWM1P0_IRQHandler                       0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EPWM1P1_IRQHandler                       0x00000269   Thumb Code     0  startup_m480.o(.text)
+    EPWM1P2_IRQHandler                       0x00000269   Thumb Code     0  startup_m480.o(.text)
+    GPA_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    GPB_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    GPD_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    GPE_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    GPF_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    GPH_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    I2C0_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    I2C1_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    I2C2_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    I2S0_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    IRC_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    OHCI_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    OPA0_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    PDMA_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    PWRWU_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    QEI0_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    QEI1_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    QSPI0_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    QSPI1_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    RAMPE_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    RTC_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SC0_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SC1_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SC2_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SDH0_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SDH1_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SPI0_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SPI1_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SPI2_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SPI3_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    SPIM_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    TAMPER_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    TMR2_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    TMR3_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    TRNG_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    UART0_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    UART1_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    UART2_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    UART3_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    UART4_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    UART5_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    UART6_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    UART7_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    USBD20_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    USBD_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    USBOTG20_IRQHandler                      0x00000269   Thumb Code     0  startup_m480.o(.text)
+    USBOTG_IRQHandler                        0x00000269   Thumb Code     0  startup_m480.o(.text)
+    USCI0_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    USCI1_IRQHandler                         0x00000269   Thumb Code     0  startup_m480.o(.text)
+    WDT_IRQHandler                           0x00000269   Thumb Code     0  startup_m480.o(.text)
+    WWDT_IRQHandler                          0x00000269   Thumb Code     0  startup_m480.o(.text)
+    __aeabi_uldivmod                         0x00000285   Thumb Code    98  uldiv.o(.text)
+    __aeabi_llsr                             0x000002e7   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x000002e7   Thumb Code     0  llushr.o(.text)
+    __scatterload                            0x00000309   Thumb Code    38  init.o(.text)
+    __scatterload_rt2                        0x00000309   Thumb Code     0  init.o(.text)
+    __aeabi_llsl                             0x00000339   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x00000339   Thumb Code     0  llshl.o(.text)
+    EADC01_IRQHandler                        0x00000359   Thumb Code    26  ebi_lcd_module.o(.text.EADC01_IRQHandler)
+    GPC_IRQHandler                           0x00000375   Thumb Code   204  gpio_interrupt.o(.text.GPC_IRQHandler)
+    GPG_IRQHandler                           0x00000441   Thumb Code   672  gpio_interrupt.o(.text.GPG_IRQHandler)
+    ILI9341_Initial                          0x000006e1   Thumb Code   716  ebi_lcd_module.o(.text.ILI9341_Initial)
+    LCD_BlankArea                            0x000009d1   Thumb Code   646  ebi_lcd_module.o(.text.LCD_BlankArea)
+    LCD_Draw_A_Tetris_Block                  0x00000c59   Thumb Code    66  ebi_lcd_module.o(.text.LCD_Draw_A_Tetris_Block)
+    LCD_Draw_BlockType1                      0x00000c9d   Thumb Code   982  ebi_lcd_module.o(.text.LCD_Draw_BlockType1)
+    LCD_Draw_BlockType3                      0x00001075   Thumb Code  7130  ebi_lcd_module.o(.text.LCD_Draw_BlockType3)
+    LCD_Draw_BlockType4                      0x00002c51   Thumb Code  7052  ebi_lcd_module.o(.text.LCD_Draw_BlockType4)
+    LCD_Draw_BlockType5                      0x000047dd   Thumb Code  3472  ebi_lcd_module.o(.text.LCD_Draw_BlockType5)
+    LCD_Draw_BlockType6                      0x0000556d   Thumb Code  3534  ebi_lcd_module.o(.text.LCD_Draw_BlockType6)
+    LCD_Draw_BlockType7                      0x0000633d   Thumb Code  7162  ebi_lcd_module.o(.text.LCD_Draw_BlockType7)
+    LCD_Draw_GameField                       0x00007f39   Thumb Code  3844  ebi_lcd_module.o(.text.LCD_Draw_GameField)
+    ProcessHardFault                         0x00008e3d   Thumb Code   264  retarget.o(.text.ProcessHardFault)
+    SYS_Init                                 0x00008fd9   Thumb Code  1108  system_initialization.o(.text.SYS_Init)
+    SystemInit                               0x0000942d   Thumb Code   112  system_m480.o(.text.SystemInit)
+    TMR0_IRQHandler                          0x0000949d   Thumb Code   106  main.o(.text.TMR0_IRQHandler)
+    TMR1_IRQHandler                          0x00009509   Thumb Code    44  ebi_lcd_module.o(.text.TMR1_IRQHandler)
+    clearCurrentMove                         0x00009535   Thumb Code  7530  ebi_lcd_module.o(.text.clearCurrentMove)
+    fputc                                    0x0000b2a1   Thumb Code    74  retarget.o(.text.fputc)
+    isValidStep                              0x0000b2ed   Thumb Code   518  gamefieldfeature.o(.text.isValidStep)
+    main                                     0x0000b4f5   Thumb Code   350  main.o(.text.main)
+    __0printf$8                              0x0000b655   Thumb Code    22  printf8.o(i.__0printf$8)
+    __1printf$8                              0x0000b655   Thumb Code     0  printf8.o(i.__0printf$8)
+    __2printf                                0x0000b655   Thumb Code     0  printf8.o(i.__0printf$8)
+    __scatterload_copy                       0x0000b675   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000b683   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0000b685   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    puts                                     0x0000baf9   Thumb Code    30  puts.o(i.puts)
+    blueBlock                                0x0000bb1c   Data         200  picture.o(.rodata.blueBlock)
+    grayBlock                                0x0000bbe4   Data         200  picture.o(.rodata.grayBlock)
+    greenBlock                               0x0000bcac   Data         200  picture.o(.rodata.greenBlock)
+    next                                     0x0000bd74   Data         270  picture.o(.rodata.next)
+    orangeBlock                              0x0000be82   Data         200  picture.o(.rodata.orangeBlock)
+    purpleBlock                              0x0000bf4a   Data         200  picture.o(.rodata.purpleBlock)
+    redBlock                                 0x0000c012   Data         200  picture.o(.rodata.redBlock)
+    score                                    0x0000c0da   Data         270  picture.o(.rodata.score)
+    skyBlueBlock                             0x0000c1e8   Data         200  picture.o(.rodata.skyBlueBlock)
+    Region$$Table$$Base                      0x0000c334   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0000c354   Number         0  anon$$obj.o(Region$$Table)
+    CyclesPerUs                              0x20000000   Data           4  system_m480.o(.data.CyclesPerUs)
+    Timer1_cnt                               0x20000008   Data           1  ebi_lcd_module.o(.bss.Timer1_cnt)
+    Timer1_flag                              0x20000009   Data           1  ebi_lcd_module.o(.bss.Timer1_flag)
+    __stdout                                 0x2000000c   Data          84  retarget.o(.bss.__stdout)
+    currentDirection                         0x20000060   Data           1  main.o(.bss.currentDirection)
+    currentType                              0x20000061   Data           1  main.o(.bss.currentType)
+    currentX                                 0x20000062   Data           2  main.o(.bss.currentX)
+    currentXLLimit                           0x20000064   Data           1  main.o(.bss.currentXLLimit)
+    currentXRLimit                           0x20000065   Data           1  main.o(.bss.currentXRLimit)
+    currentY                                 0x20000066   Data           2  main.o(.bss.currentY)
+    currentYLimit                            0x20000068   Data           2  main.o(.bss.currentYLimit)
+    g_u32AdcIntFlag_TP                       0x2000006c   Data           4  ebi_lcd_module.o(.bss.g_u32AdcIntFlag_TP)
+    playFieldData                            0x20000070   Data        1680  gamefieldfeature.o(.bss.playFieldData)
+    __initial_sp                             0x20000f00   Data           0  startup_m480.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000209
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x0000c358, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000c354, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000001f4   Data   RO           19    RESET               startup_m480.o
+    0x000001f4   0x000001f4   0x00000000   Code   RO          470  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000001f4   0x000001f4   0x00000004   Code   RO          751    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x000001f8   0x000001f8   0x00000004   Code   RO          754    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000001fc   0x000001fc   0x00000000   Code   RO          756    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000001fc   0x000001fc   0x00000000   Code   RO          758    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000001fc   0x000001fc   0x00000008   Code   RO          759    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000204   0x00000204   0x00000000   Code   RO          761    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000204   0x00000204   0x00000000   Code   RO          763    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000204   0x00000204   0x00000004   Code   RO          752    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000208   0x00000208   0x0000007c   Code   RO           20  * .text               startup_m480.o
+    0x00000284   0x00000284   0x00000062   Code   RO          776    .text               mc_w.l(uldiv.o)
+    0x000002e6   0x000002e6   0x00000020   Code   RO          778    .text               mc_w.l(llushr.o)
+    0x00000306   0x00000306   0x00000002   PAD
+    0x00000308   0x00000308   0x00000030   Code   RO          791    .text               mc_w.l(init.o)
+    0x00000338   0x00000338   0x0000001e   Code   RO          793    .text               mc_w.l(llshl.o)
+    0x00000356   0x00000356   0x00000002   PAD
+    0x00000358   0x00000358   0x0000001a   Code   RO          102    .text.EADC01_IRQHandler  ebi_lcd_module.o
+    0x00000372   0x00000372   0x00000002   PAD
+    0x00000374   0x00000374   0x000000cc   Code   RO          186    .text.GPC_IRQHandler  gpio_interrupt.o
+    0x00000440   0x00000440   0x000002a0   Code   RO          184    .text.GPG_IRQHandler  gpio_interrupt.o
+    0x000006e0   0x000006e0   0x000002f0   Code   RO           58    .text.ILI9341_Initial  ebi_lcd_module.o
+    0x000009d0   0x000009d0   0x00000286   Code   RO           68    .text.LCD_BlankArea  ebi_lcd_module.o
+    0x00000c56   0x00000c56   0x00000002   PAD
+    0x00000c58   0x00000c58   0x00000042   Code   RO           96    .text.LCD_Draw_A_Tetris_Block  ebi_lcd_module.o
+    0x00000c9a   0x00000c9a   0x00000002   PAD
+    0x00000c9c   0x00000c9c   0x000003d6   Code   RO           82    .text.LCD_Draw_BlockType1  ebi_lcd_module.o
+    0x00001072   0x00001072   0x00000002   PAD
+    0x00001074   0x00001074   0x00001bda   Code   RO           86    .text.LCD_Draw_BlockType3  ebi_lcd_module.o
+    0x00002c4e   0x00002c4e   0x00000002   PAD
+    0x00002c50   0x00002c50   0x00001b8c   Code   RO           88    .text.LCD_Draw_BlockType4  ebi_lcd_module.o
+    0x000047dc   0x000047dc   0x00000d90   Code   RO           90    .text.LCD_Draw_BlockType5  ebi_lcd_module.o
+    0x0000556c   0x0000556c   0x00000dce   Code   RO           92    .text.LCD_Draw_BlockType6  ebi_lcd_module.o
+    0x0000633a   0x0000633a   0x00000002   PAD
+    0x0000633c   0x0000633c   0x00001bfa   Code   RO           94    .text.LCD_Draw_BlockType7  ebi_lcd_module.o
+    0x00007f36   0x00007f36   0x00000002   PAD
+    0x00007f38   0x00007f38   0x00000f04   Code   RO           80    .text.LCD_Draw_GameField  ebi_lcd_module.o
+    0x00008e3c   0x00008e3c   0x0000019c   Code   RO          269    .text.ProcessHardFault  retarget.o
+    0x00008fd8   0x00008fd8   0x00000454   Code   RO          175    .text.SYS_Init      system_initialization.o
+    0x0000942c   0x0000942c   0x00000070   Code   RO            4    .text.SystemInit    system_m480.o
+    0x0000949c   0x0000949c   0x0000006a   Code   RO           29    .text.TMR0_IRQHandler  main.o
+    0x00009506   0x00009506   0x00000002   PAD
+    0x00009508   0x00009508   0x0000002c   Code   RO           48    .text.TMR1_IRQHandler  ebi_lcd_module.o
+    0x00009534   0x00009534   0x00001d6a   Code   RO          104    .text.clearCurrentMove  ebi_lcd_module.o
+    0x0000b29e   0x0000b29e   0x00000002   PAD
+    0x0000b2a0   0x0000b2a0   0x0000004a   Code   RO          283    .text.fputc         retarget.o
+    0x0000b2ea   0x0000b2ea   0x00000002   PAD
+    0x0000b2ec   0x0000b2ec   0x00000206   Code   RO          149    .text.isValidStep   gamefieldfeature.o
+    0x0000b4f2   0x0000b4f2   0x00000002   PAD
+    0x0000b4f4   0x0000b4f4   0x0000015e   Code   RO           31    .text.main          main.o
+    0x0000b652   0x0000b652   0x00000002   PAD
+    0x0000b654   0x0000b654   0x00000020   Code   RO          691    i.__0printf$8       mc_w.l(printf8.o)
+    0x0000b674   0x0000b674   0x0000000e   Code   RO          799    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000b682   0x0000b682   0x00000002   Code   RO          800    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0000b684   0x0000b684   0x0000000e   Code   RO          801    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0000b692   0x0000b692   0x00000002   PAD
+    0x0000b694   0x0000b694   0x00000410   Code   RO          698    i._printf_core      mc_w.l(printf8.o)
+    0x0000baa4   0x0000baa4   0x00000024   Code   RO          699    i._printf_post_padding  mc_w.l(printf8.o)
+    0x0000bac8   0x0000bac8   0x0000002e   Code   RO          700    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x0000baf6   0x0000baf6   0x00000002   PAD
+    0x0000baf8   0x0000baf8   0x00000024   Code   RO          473    i.puts              mc_w.l(puts.o)
+    0x0000bb1c   0x0000bb1c   0x000000c8   Data   RO          132    .rodata.blueBlock   picture.o
+    0x0000bbe4   0x0000bbe4   0x000000c8   Data   RO          130    .rodata.grayBlock   picture.o
+    0x0000bcac   0x0000bcac   0x000000c8   Data   RO          135    .rodata.greenBlock  picture.o
+    0x0000bd74   0x0000bd74   0x0000010e   Data   RO          138    .rodata.next        picture.o
+    0x0000be82   0x0000be82   0x000000c8   Data   RO          133    .rodata.orangeBlock  picture.o
+    0x0000bf4a   0x0000bf4a   0x000000c8   Data   RO          136    .rodata.purpleBlock  picture.o
+    0x0000c012   0x0000c012   0x000000c8   Data   RO          137    .rodata.redBlock    picture.o
+    0x0000c0da   0x0000c0da   0x0000010e   Data   RO          139    .rodata.score       picture.o
+    0x0000c1e8   0x0000c1e8   0x000000c8   Data   RO          131    .rodata.skyBlueBlock  picture.o
+    0x0000c2b0   0x0000c2b0   0x00000083   Data   RO          289    .rodata.str1.1      retarget.o
+    0x0000c333   0x0000c333   0x00000001   PAD
+    0x0000c334   0x0000c334   0x00000020   Data   RO          798    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x0000c354, Size: 0x00000004, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x0000c354   0x00000004   Data   RW            7    .data.CyclesPerUs   system_m480.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000008, Load base: 0x0000c358, Size: 0x00000ef8, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000008        -       0x00000001   Zero   RW          107    .bss.Timer1_cnt     ebi_lcd_module.o
+    0x20000009        -       0x00000001   Zero   RW          106    .bss.Timer1_flag    ebi_lcd_module.o
+    0x2000000a   0x0000c358   0x00000002   PAD
+    0x2000000c        -       0x00000054   Zero   RW          290    .bss.__stdout       retarget.o
+    0x20000060        -       0x00000001   Zero   RW           37    .bss.currentDirection  main.o
+    0x20000061        -       0x00000001   Zero   RW           36    .bss.currentType    main.o
+    0x20000062        -       0x00000002   Zero   RW           35    .bss.currentX       main.o
+    0x20000064        -       0x00000001   Zero   RW           39    .bss.currentXLLimit  main.o
+    0x20000065        -       0x00000001   Zero   RW           38    .bss.currentXRLimit  main.o
+    0x20000066        -       0x00000002   Zero   RW           33    .bss.currentY       main.o
+    0x20000068        -       0x00000002   Zero   RW           34    .bss.currentYLimit  main.o
+    0x2000006a   0x0000c358   0x00000002   PAD
+    0x2000006c        -       0x00000004   Zero   RW          108    .bss.g_u32AdcIntFlag_TP  ebi_lcd_module.o
+    0x20000070        -       0x00000690   Zero   RW          154    .bss.playFieldData  gamefieldfeature.o
+    0x20000700        -       0x00000800   Zero   RW           17    STACK               startup_m480.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+     42240         82          0          0          6     319660   ebi_lcd_module.o
+       518         20          0          0       1680       6658   gamefieldfeature.o
+       876         16          0          0          0       1755   gpio_interrupt.o
+       456          0          0          0         10       3725   main.o
+         0          0       1940          0          0        938   picture.o
+       486        148        131          0         84       5534   retarget.o
+       124         26        500          0       2048        980   startup_m480.o
+      1108          0          0          0          0       5778   system_initialization.o
+       112          0          0          4          0       4355   system_m480.o
+
+    ----------------------------------------------------------------------
+     45944        292       2604          4       3832     349383   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        24          0          1          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        48         10          0          0          0         68   init.o
+        30          0          0          0          0         68   llshl.o
+        32          0          0          0          0         68   llushr.o
+      1154         54          0          0          0        352   printf8.o
+        36          6          0          0          0         80   puts.o
+        98          0          0          0          0         92   uldiv.o
+
+    ----------------------------------------------------------------------
+      1456         78          0          0          0        728   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1448         78          0          0          0        728   mc_w.l
+
+    ----------------------------------------------------------------------
+      1456         78          0          0          0        728   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     47400        370       2604          4       3832     349883   Grand Totals
+     47400        370       2604          4       3832     349883   ELF Image Totals
+     47400        370       2604          4          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                50004 (  48.83kB)
+    Total RW  Size (RW Data + ZI Data)              3836 (   3.75kB)
+    Total ROM Size (Code + RO Data + RW Data)      50008 (  48.84kB)
+
+==============================================================================
+
