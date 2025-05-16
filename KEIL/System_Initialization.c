@@ -222,6 +222,8 @@ void SYS_Init(void)
     CLK->APBCLK0 |= (1 << 28);                                  // enable EADC0 clock
     // TRNG peripheral clock
     CLK->APBCLK1 |= (1 << 25);                                  // enable TRNG clock
+    // Enable CRYPTO peripheral clock in CRPTCKEN (CLK_AHBCLK[12]) - (page 2026)
+    CLK->AHBCLK |= (1 << 12);                                   // enable CRYPTO clock
 
     // Turn off TRNG then set the clock prescaler then turn on TRNG
     TRNG->CTL &= ~(0x1 << 0);                         // Clear TRNG_CTL[0] to disable TRNG
@@ -236,6 +238,9 @@ void SYS_Init(void)
 
     // Enable TRNG
     TRNG->CTL |= (1 << 0);                                // Set TRNG_CTL[0] to enable TRNG
+
+    // Reset CRYPTO controller in CRPTRST (SYS_IPRST0[12])
+    SYS->IPRST0 |= (1 << 12);
 
     /*---------------------------------------------------------------------------------------------------------*/
     /* Init I/O Multi-function                                                                                 */

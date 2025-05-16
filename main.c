@@ -43,15 +43,40 @@ volatile uint16_t   currentYLimit;
 /* Functions                                                                 */
 /*---------------------------------------------------------------------------*/
 
-uint8_t generateRandomNumber(void) {
+uint8_t generateRandomNumberTRNG(void) {
     while(!(TRNG->CTL & (1 << 1)));                       // Wait until TRNG is ready
     uint8_t randomNumber = TRNG->DATA & 0xFF;       // Get a random number between 0 and 7
     return randomNumber;
 }
 
+uint8_t generateRandomNumberPRNG(void) {
+    // Check the BUSY(CRYPTO_PRNG_CTL[8]) until it changes to 0
+    while(!(CRPT->PRNG_CTL & (1 << 8)));
+
+    // Configure KEYSZ (CRYPTO_PRNG_CTL[3:2])
+    CRPT->PRNG_CTL &= ~(0b11 << 2);                        // Clear current settings
+    CRPT->PRNG_CTL |= (0b00 << 2);                         // Set new value for KEYSZ
+    
+    // Write a random seed to CRYPTO_PRNG _SEED register
+    CRPT->PRNG_SEED = 0x12345678;                         // Set a random seed value
+
+    // Reload New Seed for PRNG Engine
+    CRPT->PRNG_CTL |= (1 << 1);                          // Set PRNG_CTL[1] to reload new seed
+
+    // Start PRNG Engine
+    CRPT->PRNG_CTL |= (1 << 0);                          // Set PRNG_CTL[0] to start PRNG engine
+
+    while(!(CRPT->PRNG_CTL & (1 << 8)));               // Wait until PRNG is ready
+
+    uint8_t randomNumber = CRPT->PRNG_KEY[0] & 0xFF;
+    return randomNumber;
+}
+
 void generateNewBlock() {
-    uint8_t randomNumber = (generateRandomNumber() % 7) + 1;
-    switch (randomNumber) {
+    uint8_t randomNumberByTRNG = (generateRandomNumberTRNG() % 7) + 1;
+    uint8_t randomNumberByPRNG = (generateRandomNumberPRNG() % 7) + 1;
+
+    switch (randomNumberByTRNG) {
         case 1: 
             currentType = 1;
             currentDirection = 2;
