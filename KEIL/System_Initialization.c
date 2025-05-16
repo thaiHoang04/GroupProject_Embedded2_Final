@@ -113,6 +113,11 @@ void configTimer1() {
 }
 
 void configTimer0() {
+    //Config the timer 0
+    CLK->CLKSEL1 &= ~ (0b111 << 8);                            // clear setting and choose clock source from HXT
+    CLK->CLKSEL1 |= (0b010 << 8);                             // Set clock source for Timer 1 to PCLK0
+    CLK->APBCLK0 |= (1 << 2); 		                            // Clock enable for Timer 1
+
     // Set Prescale
     TIMER0->CTL &= ~(0xFF << 0);                                // clear current setting for Prescale
     TIMER0->CTL |= (11 << 0);                                   // Prescale = (11+1) = 12 -> TM1 Clock = HCLK / 12 = 1 MHz
