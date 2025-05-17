@@ -61,12 +61,15 @@ uint8_t generateRandomNumberPRNG(void) {
     CRPT->PRNG_SEED = 0x12345678;                         // Set a random seed value
 
     // Reload New Seed for PRNG Engine
-    CRPT->PRNG_CTL |= (1 << 1);                          // Set PRNG_CTL[1] to reload new seed
+    CRPT->PRNG_CTL |= (1 << 1);                      // Set PRNG_CTL[1] to reload new seed
 
     // Start PRNG Engine
-    CRPT->PRNG_CTL |= (1 << 0);                          // Set PRNG_CTL[0] to start PRNG engine
+    CRPT->PRNG_CTL |= (1 << 0);                      // Set PRNG_CTL[0] to start PRNG engine
 
-    while(!(CRPT->PRNG_CTL & (1 << 8)));               // Wait until PRNG is ready
+    while(!(CRPT->PRNG_CTL & (1 << 8)));             // Wait until PRNG is ready
+
+    CRPT->INTEN |= (1 << 16);                       // Enable PRNG interrupt
+    while(!(CRPT->INTSTS & (1 << 16)));             // Wait until PRNG interrupt is triggered
 
     uint8_t randomNumber = CRPT->PRNG_KEY[0] & 0xFF;
     return randomNumber;
