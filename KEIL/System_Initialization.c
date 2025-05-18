@@ -94,6 +94,9 @@ void configTimer1() {
     // Enable TM1 interrup flag TIF
     TIMER1->CTL |= (1 << 29);
 
+    // If EXTCNTEN (TIMERx_CTL[24]) is 0, user can read CNT value for getting current 24-bit counter value
+    TIMER1->CNT &= ~(1 << 24); 
+
     // Set timeout value 
     // Time-out = 100ms -> TM1 CMP = 100000 - 1
     TIMER1->CMP = 100000 - 1;
@@ -110,38 +113,6 @@ void configTimer1() {
 
     /* Reset Timer1_cnt */
     Timer1_cnt = 0;
-}
-
-void configTimer0() {
-    //Config the timer 0
-    CLK->CLKSEL1 &= ~ (0b111 << 8);                            // clear setting and choose clock source from HXT
-    CLK->CLKSEL1 |= (0b010 << 8);                             // Set clock source for Timer 1 to PCLK0
-    CLK->APBCLK0 |= (1 << 2); 		                            // Clock enable for Timer 1
-
-    // Set Prescale
-    TIMER0->CTL &= ~(0xFF << 0);                                // clear current setting for Prescale
-    TIMER0->CTL |= (11 << 0);                                   // Prescale = (11+1) = 12 -> TM1 Clock = HCLK / 12 = 1 MHz
-	
-    // Set TM1 operation mode to Periodic Mode
-    TIMER0->CTL &= ~(0b11 << 27);                               // Clear current settings
-    TIMER0->CTL |= (0b01 << 27);	                            // Periodic Mode
-
-    // The behavior selection in periodic mode is Enabled.
-    TIMER0->CTL |= (1 << 20);
-	
-    // Enable TM1 interrup flag TIF
-    TIMER0->CTL |= (1 << 29);
-
-    // Set timeout value 
-    // Time-out = 1000ms -> TM1 CMP = 100000 - 1
-    TIMER0->CMP = 1000000 - 1;
-	
-    // TM1 Start Counting
-    TIMER0->CTL |= (1 << 30);
-    
-    // NVIC interrupt configuration
-    NVIC->ISER[1] |= (1 << (32 - 32));		                    // Enable NVIC for the Timer 1 interrupt - 
-                                                                // TM1_INT is bit 33 --> belong to ISER1 (32 to 63)
 }
 
 void SYS_Init(void)
